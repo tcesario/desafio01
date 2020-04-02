@@ -9,11 +9,11 @@
 
 # Pre-requisitos
 
-Criação de um domínio em http://www.dot.tk/
-Criação das zonas no Route53 para cada site
-Subir uma instância EC2 na AWS com a imagem do CentOS 7
-Instalação do nginx e criação de um virtualhost para cada site
-Criação um diretório /var/www/html/ para cada site
+ * Criação de um domínio em http://www.dot.tk/
+ * Criação das zonas no Route53 para cada site
+ * Subir uma instância EC2 na AWS com a imagem do CentOS 7
+ * Instalação do nginx e criação de um virtualhost para cada site
+ * Criação um diretório /var/www/html/ para cada site
 
 # Instalação e configuração do Nginx para o site
 ```
