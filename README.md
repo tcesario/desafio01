@@ -1,13 +1,13 @@
-## Documentação do desafio 01
+# Documentação do desafio 01
 
-## Objetivo
+# Objetivo
 
 Criar um site estático em php
 Criar um blog com o Wordpress
 Criar uma loja com o Magento
 Instalação do Tomcat
 
-## Pre-requisitos
+# Pre-requisitos
 
 Criação de um domínio em http://www.dot.tk/
 Criação das zonas no Route53 para cada site
@@ -15,13 +15,13 @@ Subir uma instância EC2 na AWS com a imagem do CentOS 7
 Instalação do nginx e criação de um virtualhost para cada site
 Criação um diretório /var/www/html/ para cada site
 
-## Instalação e configuração do Nginx para o site
+# Instalação e configuração do Nginx para o site
 
 yum -y update
 yum install epel-release
 yum install nginx php73 php73-php-fpm
 
-cat /etc/nginx/conf.d/site.conf
+```cat /etc/nginx/conf.d/site.conf
 server {
         listen       80;
         server_name  site-batata.batatinha.tk;
@@ -58,9 +58,11 @@ env[PATH] = /usr/local/bin:/usr/bin:/bin
 env[TMP] = /tmp
 env[TMPDIR] = /tmp
 env[TEMP] = /tmp
+```
 
-## Instalação e configuração do Wordpress
+# Instalação e configuração do Wordpress
 
+```
 cat /etc/nginx/conf.d/blog.conf
 server {
         listen       80;
@@ -90,9 +92,11 @@ define( 'DB_USER', 'wp-admin' );
 define( 'DB_PASSWORD', '' );
 define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8mb4' );
+```
 
-### Instalação e configuração do Magento
+# Instalação e configuração do Magento
 
+```
 php73 -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php73 composer-setup.php --install-dir=/usr/bin/ --filename=composer
 composer create-project --repository=https://repo.magento.com/ magento/project-community-edition magento
@@ -351,3 +355,4 @@ server {
         proxy_pass http://tomcat/;
         }
 }
+```
