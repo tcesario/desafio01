@@ -2,10 +2,10 @@
 
 # Objetivo
 
-Criar um site estático em php
-Criar um blog com o Wordpress
-Criar uma loja com o Magento
-Instalação do Tomcat
+⋅⋅*Criar um site estático em php
+⋅⋅*Criar um blog com o Wordpress
+⋅⋅*Criar uma loja com o Magento
+⋅⋅*Instalação do Tomcat
 
 # Pre-requisitos
 
@@ -16,12 +16,11 @@ Instalação do nginx e criação de um virtualhost para cada site
 Criação um diretório /var/www/html/ para cada site
 
 # Instalação e configuração do Nginx para o site
-
+```
 yum -y update
-yum install epel-release
-yum install nginx php73 php73-php-fpm
+yum install epel-release nginx php73 php73-php-fpm
 
-```cat /etc/nginx/conf.d/site.conf
+cat /etc/nginx/conf.d/site.conf
 server {
         listen       80;
         server_name  site-batata.batatinha.tk;
@@ -302,9 +301,9 @@ location ~* (\.php$|\.phtml$|\.htaccess$|\.git) {
     deny all;
 }
 }
-
-### Instalação e configuração do Tomcat
-
+```
+# Instalação e configuração do Tomcat
+```
 wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.tar.gz
 tar xzvf apache-tomcat-9.0.33.tar.gz
 chgrp -R tomcat /opt/tomcat
