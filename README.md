@@ -62,6 +62,13 @@ env[TEMP] = /tmp
 # Instalação e configuração do Wordpress
 
 ```
+curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup |  bash
+yum -y install MariaDB-server MariaDB-client php73-php-mysqlnd
+systemctl start mariadb
+systemctl enable
+wget https://wordpress.org/latest.tar.gz
+tar xzvf latest.tar.gz
+
 cat /etc/nginx/conf.d/blog.conf
 server {
         listen       80;
@@ -77,13 +84,6 @@ server {
     include fastcgi_params;
   }
 }
-
-curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup |  bash
-yum -y install MariaDB-server MariaDB-client php73-php-mysqlnd
-systemctl start mariadb
-systemctl enable
-wget https://wordpress.org/latest.tar.gz
-tar xzvf latest.tar.gz
 
 cat /var/www/html/blog/wp-config.php | grep -i define
 define( 'DB_NAME', 'wordpress' );
