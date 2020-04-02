@@ -2,10 +2,10 @@
 
 # Objetivo
 
-⋅⋅*Criar um site estático em php
-⋅⋅*Criar um blog com o Wordpress
-⋅⋅*Criar uma loja com o Magento
-⋅⋅*Instalação do Tomcat
+ * Criar um site estático em php
+ * Criar um blog com o Wordpress
+ * Criar uma loja com o Magento
+ * Instalação do Tomcat
 
 # Pre-requisitos
 
